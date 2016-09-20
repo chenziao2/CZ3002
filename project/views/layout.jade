@@ -28,9 +28,9 @@ html(lang='en')
               .navbar-brand
                 div Singapore
                 div(style='color: #428BCA; font-size: 14px;') Healthcare Portal
-            ul#dropdown-subjects.dropdown-menu
-              li
-                span Change Subject
+            //- ul#dropdown-subjects.dropdown-menu
+              //- li
+                //- span Change Subject
         .collapse.navbar-collapse
           ul.nav.navbar-nav
             li
@@ -39,7 +39,7 @@ html(lang='en')
             li.dropdown
               a.dropdown-toggle(href='', data-toggle='dropdown')
                 span.glyphicon.glyphicon-flag
-                |  School
+                |  Hospitals
               ul.dropdown-menu
                 li
                   a(href='/school/search/')
@@ -53,29 +53,29 @@ html(lang='en')
                   a(href='/bookmark/view/')
                     span.glyphicon.glyphicon-book
                     |  Bookmark
-                li
-                  a(href='/apply/')
-                    span.glyphicon.glyphicon-file
-                    |  Apply
             li.dropdown
               a.dropdown-toggle(href='', data-toggle='dropdown')
                 span.glyphicon.glyphicon-list-alt
-                |  Review
+                |  Doctors
               ul.dropdown-menu
                 li
-                  a(href='/review/view/')
-                    span.glyphicon.glyphicon-eye-open
-                    |  view Review
+                  a(href='/school/search/')
+                    span.glyphicon.glyphicon-search
+                    |  Search
                 li
-                  a(href='/review/create/')
-                    span.glyphicon.glyphicon-plus-sign
-                    |  Create Review
+                  a(href='/searchhistory/')
+                    span.glyphicon.glyphicon-book
+                    |  Search History
+                li
+                  a(href='/bookmark/view/')
+                    span.glyphicon.glyphicon-book
+                    |  Bookmark
 
 
             li
               a(href='/about/')
                 span.glyphicon.glyphicon-tag
-                |  About Gender Inequality
+                |  About 101
           ul.nav.navbar-nav.navbar-right
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown')
@@ -102,5 +102,4 @@ html(lang='en')
                   a(href='/accounts/register/') New user?
         // /.nav-collapse
     .container
-      h1 Anything you want to display in the page
-
+      block content
