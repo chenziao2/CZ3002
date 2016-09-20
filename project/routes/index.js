@@ -7,10 +7,7 @@ var User = mongoose.model("User");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	var user = new User({username:'chenziao'});
-	console.log(user.username);
-	user.save(function(){});
-  res.render('index', { title: 'Express' });
+  res.render('HomePage');
 });
 
 module.exports = router;
