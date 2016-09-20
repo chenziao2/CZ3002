@@ -1,9 +1,0 @@
-var models = ['./User.js'];
-
-exports.initialize = function(){
-  var l = models.length;
-  for (var i = 0;i<1;i++){
-    require(models[i])();
-  }
-
-};

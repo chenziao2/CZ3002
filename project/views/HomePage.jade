@@ -1,4 +1,15 @@
 extends layout
 
 block content
-  #map(style='width:100%;height:500px') #{Map}
+  #map(style='width:100%;height:500px')
+
+  script.
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 1.362083, lng: 103.819836},
+      zoom: 13
+      });
+    }
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAj9ZMqwI_aJR1RDXwAiZXHzEg1T_ZKjnY&callback=initMap')
+
