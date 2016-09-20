@@ -9,8 +9,7 @@ var publicConfig = {
   key: 'AIzaSyAj9ZMqwI_aJR1RDXwAiZXHzEg1T_ZKjnY',
   stagger_time:       1000, // for elevationPath 
   encode_polylines:   false,
-  secure:             true, // use https 
-  proxy:              'http://127.0.0.1:9999' // optional, set a proxy for HTTP requests 
+  secure:             false, // use https 
 };
 var gmAPI = new GoogleMapsAPI(publicConfig);
 
@@ -27,6 +26,7 @@ var geocodeParams = {
 router.get('/', function(req, res, next) {
   gmAPI.geocode(geocodeParams, function(err, result){
   	console.log(result);
+	console.log(err);
   	res.render('HomePage',{Map:result});
 });
 });
