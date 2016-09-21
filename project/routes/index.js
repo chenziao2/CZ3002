@@ -8,5 +8,14 @@ var User = mongoose.model("User");
 router.get('/', function(req, res, next) {
   	res.render('HomePage');
 });
+router.get('/search_hospital', function(req, res, next) {
+    res.render('SearchHospital');
+});
+router.get('/search_doctor', function(req, res, next) {
+    res.render('SearchDoctor');
+});
+router.get('/register', function(req, res, next) {
+    res.render('Register');
+});
 
 module.exports = router;

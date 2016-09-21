@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div
+    form.form-inline
+      .form-group
+        input.form-control(style='width:250px' type='text', placeholder='Hospital Name')
+      button.btn.btn-primary(type='submit')
+        span.glyphicon.glyphicon-search
+        |  Search
+  button.btn.btn-info.btn-sm(type='button', style='margin:10px') Sort by Name
+  button.btn.btn-info.btn-sm(type='button', style='margin:10px') Sort by Ratings

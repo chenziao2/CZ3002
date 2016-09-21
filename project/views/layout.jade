@@ -4,7 +4,7 @@ html(lang='en')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='Singapore Health Care Portal')
-    meta(name='author', content='Chen Ziao')
+    meta(name='author', content='Chen Ziao & Zhou Zhiyao')
     title
       | Singapore Healthcare Portal
     link(rel='stylesheet', href='/static/css/bootstrap.min.css?20140217', media='screen')
@@ -12,7 +12,7 @@ html(lang='en')
     link(rel='stylesheet', href='/static/css/itemrtweb.css?20140919')
     script(src='/static/js/html5shiv.js')
     script(src='/static/js/respond.min.js')
-    
+
     style.
       body{
       background-image: url('/static/images/download.jpg');
@@ -42,15 +42,15 @@ html(lang='en')
                 |  Hospitals
               ul.dropdown-menu
                 li
-                  a(href='/school/search/')
+                  a(href='/search_hospital')
                     span.glyphicon.glyphicon-search
                     |  Search
                 li
-                  a(href='/searchhistory/')
+                  a(href='#')
                     span.glyphicon.glyphicon-book
                     |  Search History
                 li
-                  a(href='/bookmark/view/')
+                  a(href='#')
                     span.glyphicon.glyphicon-book
                     |  Bookmark
             li.dropdown
@@ -59,21 +59,21 @@ html(lang='en')
                 |  Doctors
               ul.dropdown-menu
                 li
-                  a(href='/school/search/')
+                  a(href='/search_doctor')
                     span.glyphicon.glyphicon-search
                     |  Search
                 li
-                  a(href='/searchhistory/')
+                  a(href='#')
                     span.glyphicon.glyphicon-book
                     |  Search History
                 li
-                  a(href='/bookmark/view/')
+                  a(href='#')
                     span.glyphicon.glyphicon-book
                     |  Bookmark
 
 
             li
-              a(href='/about/')
+              a(href='/about')
                 span.glyphicon.glyphicon-tag
                 |  About 101
           ul.nav.navbar-nav.navbar-right
@@ -99,7 +99,7 @@ html(lang='en')
                     button.btn.btn-primary(type='submit') Sign In
                 li.divider
                 li
-                  a(href='/accounts/register/') New user?
+                  a(href='/register') New user?
         // /.nav-collapse
     .container
       block content

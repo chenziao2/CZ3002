@@ -1,0 +1,19 @@
+extend layout
+
+block content
+  #form(style="width:300px;margin:auto")
+    form
+    h3 Register
+    .form-group
+      label Name
+      input.form-control(type='text', name='name', placeholder='Name')
+    .form-group
+      label Password
+      input.form-control(type='password', name='password', placeholder='Password')
+    .form-group
+      label Email
+      input.form-control(type='email', name='email', placeholder='Email')
+    .form-group
+      label Mobile
+      input.form-control(type='text', name='mobile', placeholder='Mobile')
+      button.btn.btn-default(type='submit' style="margin-top:20px") Create
