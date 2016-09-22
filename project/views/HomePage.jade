@@ -2,10 +2,15 @@ extends layout
 
 block content
   #map(style='width:100%;height:500px')
-  a(href='/search_hospital')
-    button.btn.btn-primary.btn-lg(type='button', style='margin:30px 200px 30px 200px;float:right') Search Hospital
-  a(href='/search_doctor')
-    button.btn.btn-primary.btn-lg(type='button', style='margin:30px 200px 30px 200px;float:right') Search Doctor
+  .container(style="margin-top:20px")
+    .row
+      .col-sm-2
+      .col-sm-4
+        a(href='/search_hospital')
+          button.btn.btn-primary.btn-lg(type='button') Search Hospital
+      .col-sm-4
+        a(href='/search_doctor' style="float:right")
+          button.btn.btn-primary.btn-lg(type='button') Search Doctor
 
   script.
     var map;
