@@ -17,5 +17,8 @@ router.get('/search_doctor', function(req, res, next) {
 router.get('/register', function(req, res, next) {
     res.render('Register');
 });
+router.get('/about', function(req, res, next) {
+    res.render('About');
+});
 
 module.exports = router;
