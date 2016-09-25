@@ -3,10 +3,16 @@ var router = express.Router();
 var mongoose = require('mongoose');
 require('./Models.js').initialize();
 var User = mongoose.model("User");
+var Hospital = mongoose.model("Hospital");
+var Doctor = mongoose.model("Doctor");
+var Appointment = mongoose.model("Appointment");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  	res.render('HomePage');
+  Hospital.find({},function(err,docs){
+  console.log(err);
+        console.log(docs[0].name);
+    res.render('HomePage');});
 });
 router.get('/search_hospital', function(req, res, next) {
     res.render('SearchHospital');
